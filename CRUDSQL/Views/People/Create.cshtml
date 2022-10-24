@@ -12,36 +12,34 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group mb-2 mt-2">
                 <label asp-for="Nome" class="control-label"></label>
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2 mt-2">
                 <label asp-for="CPF" class="control-label"></label>
                 <input asp-for="CPF" type="text" class="txtCPF form-control" />
                 <span asp-validation-for="CPF" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2 mt-2">
                 <label asp-for="Nascimento" class="control-label"></label>
                 <input asp-for="Nascimento" class="form-control" />
                 <span asp-validation-for="Nascimento" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2 mt-2">
                 <label asp-for="Renda" class="control-label"></label>
                 <input asp-for="Renda" type="text" class="form-control money" />
                 <span asp-validation-for="Renda" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <input type="submit" value="Adicionar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar para a lista</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
